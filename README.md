@@ -2,6 +2,8 @@
 > A lightweight web application built with Nuxt 4 and Tailwind CSS that converts TrueType (TTF) and OpenType (OTF) fonts into optimized WOFF and WOFF2 formats entirely in your browser.
 
 ## 🚀 Features
+
+
 - Upload multiple `.ttf` / `.otf` font files via drag & drop
 - Select output format (WOFF or WOFF2) per file
 - Non-blocking conversions using a Web Worker
@@ -9,6 +11,8 @@
 - Download all converted fonts as a single ZIP archive
 - Real-time progress indicator
 - Built with Nuxt 4, Pinia, Vite, Tailwind CSS
+
+![Project Preview](preview.jpg)
 
 ```bash
 # npm

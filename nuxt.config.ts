@@ -51,6 +51,7 @@ export default defineNuxtConfig({
             "Free online font converter tool. Convert TT, OTF to WOFF, WOFF2, and vice versa. Fast, secure, and easy to use.",
         },
         { property: "og:site_name", content: "Font Converter" },
+        { property: "og:image", content: "/pr-sm.jpg" },
 
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
@@ -63,6 +64,7 @@ export default defineNuxtConfig({
           content:
             "Free online font converter tool. Convert TTF to WOFF, WOFF2, and vice versa. Fast, secure, and easy to use.",
         },
+        { name: "twitter:image", content: "/pr-sm.jpg" },
       ],
       link: [
         {
