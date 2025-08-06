@@ -30,9 +30,8 @@ function handleFiles(files: File[]) {
   const addedCount = fontStore.addFiles(files)
 
   if (addedCount < files.length) {
-    // Some files were rejected
     const rejectedCount = files.length - addedCount
-    console.warn(`${rejectedCount} файлов отклонено. Поддерживаются только TTF и OTF файлы.`)
+    console.warn(`${rejectedCount} files rejected. Only TTF and OTF formats are supported.`)
   }
 }
 
@@ -96,13 +95,13 @@ onUnmounted(() => {
 
       <div class="text-center">
         <p class="text-lg font-medium text-gray-900 mb-2">
-          Перетащите шрифты сюда
+          Drag fonts here
         </p>
         <p class="text-sm text-gray-500 mb-4">
-          или нажмите для выбора файлов
+          or click to select files
         </p>
         <p class="text-xs text-gray-400">
-          Поддерживаются форматы: TTF, OTF
+          Supported formats: TTF, OTF
         </p>
       </div>
     </div>

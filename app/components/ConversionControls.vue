@@ -13,7 +13,7 @@ const { downloadAllAsZip } = useFileDownload()
       <div class="flex items-center space-x-2">
         <LucideCheckCircle class="w-5 h-5 text-green-600" />
         <span class="text-sm text-gray-700">
-          Готово к скачиванию: {{ fontStore.convertedFiles.length }} файл(ов)
+          Ready to download: {{ fontStore.convertedFiles.length }} file(s)
         </span>
       </div>
 
@@ -22,7 +22,7 @@ const { downloadAllAsZip } = useFileDownload()
         class="btn-primary flex items-center space-x-2"
       >
         <LucideDownload class="w-4 h-4" />
-        <span>Скачать всё архивом</span>
+        <span>Download all as ZIP</span>
       </button>
     </div>
   </div>

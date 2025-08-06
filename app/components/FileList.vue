@@ -49,7 +49,7 @@ function formatFileSize(bytes: number): string {
 <template>
   <div v-if="fontStore.hasFiles" class="space-y-4">
     <h3 class="text-lg font-semibold text-gray-900">
-      Загруженные файлы ({{ fontStore.files.length }})
+      Uploaded Files ({{ fontStore.files.length }})
     </h3>
 
     <div class="space-y-3">
@@ -97,10 +97,8 @@ function formatFileSize(bytes: number): string {
 
           <!-- Показать выбранный формат для других статусов -->
           <div v-else class="text-xs text-gray-600">
-            Формат:
-            <span class="font-medium">{{
-              file.selectedFormat.toUpperCase()
-            }}</span>
+            Format:
+            <span class="font-medium">{{ file.selectedFormat.toUpperCase() }}</span>
           </div>
 
           <!-- Статус -->
@@ -120,22 +118,18 @@ function formatFileSize(bytes: number): string {
             >
               {{
                 convertingFileId === file.id
-                  ? "Конвертация..."
-                  : "Конвертировать"
+                  ? 'Converting...'
+                  : 'Convert'
               }}
             </button>
 
             <!-- Кнопка скачивания -->
             <button
-              v-else-if="
-                file.status === 'converted' &&
-                file.convertedFiles &&
-                file.convertedFiles[0]
-              "
+              v-else-if="file.status === 'converted' && file.convertedFiles && file.convertedFiles[0]"
               @click="downloadAndReset(file)"
               class="px-3 py-1 text-xs bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
             >
-              Скачать {{ file.convertedFiles[0].format.toUpperCase() }}
+              Download {{ file.convertedFiles[0].format.toUpperCase() }}
             </button>
 
             <!-- Кнопка повтора при ошибке -->
@@ -145,7 +139,7 @@ function formatFileSize(bytes: number): string {
               :disabled="convertingFileId === file.id"
               class="px-3 py-1 text-xs bg-yellow-600 text-white rounded hover:bg-yellow-700 disabled:opacity-50 transition-colors"
             >
-              Повторить
+              Retry
             </button>
 
             <!-- Кнопка удаления -->
@@ -153,7 +147,7 @@ function formatFileSize(bytes: number): string {
               v-if="file.status !== 'converting'"
               @click="fontStore.removeFile(file.id)"
               class="p-1 text-gray-400 hover:text-red-500 transition-colors"
-              title="Удалить файл"
+              title="Delete file"
             >
               <LucideX class="w-4 h-4" />
             </button>
@@ -175,7 +169,8 @@ function formatFileSize(bytes: number): string {
       @click="fontStore.clearAll"
       class="text-sm text-red-600 hover:text-red-700 transition-colors"
     >
-      Очистить все файлы
+      Clear all files
     </button>
   </div>
 </template>
+

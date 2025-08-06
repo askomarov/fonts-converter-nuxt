@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { useFontStore } from '@/stores/fontStore';
 import DropZone from '@/components/DropZone.vue'
 import FileList from '@/components/FileList.vue';
 import ConversionControls from '@/components/ConversionControls.vue';
-
-const fontStore = useFontStore();
 </script>
 
 <template>
@@ -12,10 +9,10 @@ const fontStore = useFontStore();
     <div class="container mx-auto px-4 py-8 max-w-4xl">
       <!-- Header -->
       <div class="text-center mb-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-2">Конвертер шрифтов</h1>
-        <p class="text-gray-600">
-          Конвертируйте TTF и OTF шрифты в WOFF и WOFF2 форматы
-        </p>
+        <p class="text-3xl font-bold text-gray-900 mb-2">Font Converter</p>
+        <h1 class="text-gray-600">
+          Convert TTF and OTF fonts to WOFF and WOFF2 formats
+        </h1>
       </div>
 
       <!-- Main Content -->
@@ -34,7 +31,7 @@ const fontStore = useFontStore();
       <ConversionControls />
       <!-- Footer -->
       <footer class="mt-16 text-center text-sm text-gray-500">
-        <p>Конвертация происходит локально в вашем браузере</p>
+        <p>Conversion happens locally in your browser</p>
       </footer>
     </div>
   </div>

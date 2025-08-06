@@ -11,22 +11,22 @@ const props = defineProps<Props>()
 
 const statusConfig = {
   pending: {
-    text: 'Ожидает',
+    text: 'Pending',
     classes: 'bg-gray-100 text-gray-700',
     icon: LucideClock
   },
   converting: {
-    text: 'Конвертация',
+    text: 'Converting',
     classes: 'bg-blue-100 text-blue-700',
     icon: LucideLoader2
   },
   converted: {
-    text: 'Готово',
+    text: 'Ready',
     classes: 'bg-green-100 text-green-700',
     icon: LucideCheckCircle
   },
   error: {
-    text: 'Ошибка',
+    text: 'Error',
     classes: 'bg-red-100 text-red-700',
     icon: LucideXCircle
   }
