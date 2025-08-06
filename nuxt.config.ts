@@ -2,11 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-    'nuxt-lucide-icons'
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-lucide-icons', 'nuxt-gtag'],
   vite: {
     worker: {
       format: 'es'
@@ -33,5 +29,8 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-title', content: 'TTF/WOFF' }
       ]
     }
+  },
+  gtag: {
+    id: 'GTM-P6KD4G3M'
   }
 })
