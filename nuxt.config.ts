@@ -12,7 +12,12 @@ export default defineNuxtConfig({
       format: 'es'
     },
     optimizeDeps: {
-      include: ['pako']
+      include: ['pako', 'file-saver']
+    }
+  },
+  nitro: {
+    experimental: {
+      wasm: true
     }
   },
   app: {
