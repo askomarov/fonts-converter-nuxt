@@ -100,7 +100,7 @@ onUnmounted(() => {
         <p class="text-sm text-gray-500 mb-4">
           or click to select files
         </p>
-        <p class="text-xs text-gray-400">
+        <p class="text-xs text-blue-600">
           Supported formats: TTF, OTF
         </p>
       </div>
