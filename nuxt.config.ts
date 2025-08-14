@@ -31,6 +31,10 @@ export default defineNuxtConfig({
             "Free online font converter tool. Convert TT, OTF to WOFF, WOFF2, and vice versa. Fast, secure, and easy to use font format conversion for web developers and designers.",
         },
         {
+          name: 'google-adsense-account',
+          content: 'ca-pub-8028101639830435'
+        },
+        {
           name: 'lang',
           content: 'en',
         },
